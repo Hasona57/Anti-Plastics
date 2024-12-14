@@ -510,7 +510,6 @@ button:focus {
         <h1>Welcome to Our Advanced Online Store</h1>
         <p>Your one-stop shop for quality and affordability.</p>
     </header>
-
     <!-- About Section -->
     <section class="about-us" id="about">
         <img src="https://www.royce.ac.uk/content/uploads/2020/09/resized-recycled-bottle-scaled.jpg" alt="About Us Image">
@@ -562,7 +561,38 @@ button:focus {
         <p class="testimonial">"Great products and fast delivery. Highly recommend this store!"</p>
         <p class="testimonial">"Amazing quality at an affordable price. Excellent customer service!"</p>
     </section>
-
+    <button class="circle" onclick="window.location.href='chat.html'">
+      <img src="https://cdn-icons-png.flaticon.com/128/6873/6873405.png" alt="Chat Icon" />
+    </button>
+    
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        position: relative;
+      }
+    
+      .circle {
+        width: 80px; /* Larger size */
+        height: 80px; /* Larger size */
+        border-radius: 50%;
+        background: #4caf50;
+        border: none;
+        cursor: pointer;
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    
+      .circle img {
+        width: 40px; /* Icon size */
+        height: 40px; /* Icon size */
+      }
+    </style>
+    
     <script>
        (function() {
           emailjs.init("l1LA2vKnZO_MISToT"); // Replace with your EmailJS Public Key
@@ -650,7 +680,7 @@ function processCheckout(event) {
     const phone = document.getElementById('phone').value;
     const address = document.getElementById('address').value;
     const paymentMethod = document.getElementById('payment-method').value;
-    const orderDetails = cart.map(item => `${item.name} (${item.price} x ${item.quantity}) L.E`).join(", ");
+    const orderDetails = cart.map(item => `${item.name} (${item.price} x ${item.quantity}) `).join(", ");
     const templateParams = { name, email, phone, address, paymentMethod, order: orderDetails };
 
     emailjs.send("service_doge9v9", "template_polte3v", templateParams)
