@@ -7,6 +7,12 @@
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/4403/4403555.png" type="image/x-icon">
     <style>
         /* General Layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
         .faq-section {
             max-width: 1200px;
             margin: 50px auto;
@@ -72,9 +78,66 @@
                 font-size: 0.95rem;
             }
         }
+ /* Navbar */
+ nav {
+    position: sticky;
+    top: 0;
+    background-color: #0078ff;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+}
+
+nav .logo img {
+    height: 150px;
+    margin-right: 150px auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
     </style>
 </head>
 <body>
+    <nav>
+        <div class="logo">
+            <img src="Logo.png" alt="Logo">
+            <span style="font-size: 40px; font-family:sans-serif;">Anti-Plastics</span>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Products</a></li>
+            <li><a href="index.html">About</a></li>
+            <li><a href="index.html">Testimonials</a></li>
+            <li><a href="faq.html" target="_blank">FAQ</a></li>
+            <li><a href="sales-chart.html" target="_blank">Sales Chart</a></li>
+        </ul>
+    </nav>
     <section class="faq-section">
         <h2>Frequently Asked Questions</h2>
         <div class="faq-item">
